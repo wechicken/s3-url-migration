@@ -2,7 +2,6 @@ require('dotenv').config()
 
 const mysql = require('mysql2/promise');
 const F = require('fxjs/Strict');
-const L = require('fxjs/Lazy');
 
 const JWT_S3_BUCKET = "https://jwtbucket.s3.ap-northeast-2.amazonaws.com";
 const WECODE_S3_BUCKET = "https://chicken-api-media.s3.ap-northeast-2.amazonaws.com";
@@ -35,7 +34,6 @@ const updateProfileUrl = F.curry((conn, entity) => {
   SET user_thumbnail = '${entity.user_thumbnail}'
   WHERE id = ${entity.id}
   `
-
 
   return executeQuery(conn, query)
 })
