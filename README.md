@@ -10,4 +10,5 @@ WECHICKEN_DATABASE = jwt
 WECHICKEN_PASSWORD = password
 ```
 - weecode.wechicken production DB 로 환경변수 수정한다
-- `node profile-s3-url-migrate.js` 실행
+- `npm install`: 모듈 설치
+- `node profile-s3-url-migrate.js`: 스크립트 실행
